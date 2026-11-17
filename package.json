@@ -2,6 +2,7 @@
   "name": "@civ-clone/civ2-score",
   "version": "0.0.0",
   "description": "Civilization II's score, its conquest bonus and its rating.",
+  "main": "index.js",
   "repository": "git@github.com:civ-clone/civ2-score.git",
   "keywords": [
     "typescript",
@@ -9,5 +10,53 @@
   ],
   "author": "dom111 <dom111@users.noreply.github.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@civ-clone/core-ai-client": "^0.1.3",
+    "@civ-clone/core-client": "^0.1.4",
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "@civ-clone/base-city-happiness": "^0.1.0",
+    "@civ-clone/base-civilization-barbarian": "^0.1.1",
+    "@civ-clone/base-difficulty": "^0.1.0",
+    "@civ-clone/base-game-end": "^0.1.1",
+    "@civ-clone/base-science-advance-future-technology": "^0.1.0",
+    "@civ-clone/base-tile-improvement-pollution": "^0.1.0",
+    "@civ-clone/civ2-barbarians": "github:civ-clone/civ2-barbarians#feat/initial",
+    "@civ-clone/civ2-city-happiness": "github:civ-clone/civ2-city-happiness",
+    "@civ-clone/civ2-rules": "github:civ-clone/civ2-rules",
+    "@civ-clone/civ2-spaceship": "github:civ-clone/civ2-spaceship#feat/initial",
+    "@civ-clone/core-city": "^0.1.25",
+    "@civ-clone/core-game": "^0.1.17",
+    "@civ-clone/core-player": "^0.1.10",
+    "@civ-clone/core-player-world": "^0.1.14",
+    "@civ-clone/core-rule": "^0.1.9",
+    "@civ-clone/core-score": "^0.1.0",
+    "@civ-clone/core-spaceship": "^0.1.11",
+    "@civ-clone/core-tile-improvement": "^0.1.6",
+    "@civ-clone/core-turn-based-game": "^0.1.10",
+    "@civ-clone/core-unit": "^0.1.32",
+    "@civ-clone/core-wonder": "^0.1.5",
+    "@civ-clone/core-world": "^0.1.24"
+  },
+  "civ-clone": {
+    "conflicts": [
+      "@civ-clone/civ1-score"
+    ]
+  }
 }
