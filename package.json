@@ -1,6 +1,6 @@
 {
   "name": "@civ-clone/civ2-score",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Civilization II's score, its conquest bonus and its rating.",
   "main": "index.js",
   "repository": "git@github.com:civ-clone/civ2-score.git",
