@@ -1,0 +1,13 @@
+{
+  "name": "@civ-clone/civ2-score",
+  "version": "0.0.0",
+  "description": "Civilization II's score, its conquest bonus and its rating.",
+  "repository": "git@github.com:civ-clone/civ2-score.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false
+}
